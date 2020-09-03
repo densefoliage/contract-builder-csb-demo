@@ -48,11 +48,11 @@ const toCamelCase = (string) => {
   const followingWhitespaceRegex = /\s+(.)/g;
   const firstCharRegex = /./;
   return string.replace(followingWhitespaceRegex, (match, group) => { 
-    return group.toUpperCase()  
+    return group.toUpperCase();
   }).replace(firstCharRegex, (match) => { 
-    return match.toLowerCase()
-  })
-}
+    return match.toLowerCase();
+  });
+};
 
 /*
 --------------------------------------------------

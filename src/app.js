@@ -1,25 +1,16 @@
 import React from "react";
 
-import Main from "./components/main";
-
-import BlocklyPanel from "./components/blocklyPanel";
-import blocklyConfig from "./blocklyConfig/psuedoContractConfig";
-
-const url = 'ws://localhost:3030'
-const verbose = true;
+import ContractBuilder from "./components/contractBuilder";
+import config from "./blocklyConfig/psuedoContractConfig";
 
 const App = () => {
 
   return (
-    <>
-      <div className="app">
-        {url} ({verbose?"-V true":"-V false"})
-        <Main
-        url={url}
-        verbose={verbose}
-        />
-      </div>
-    </>
+    <div className="app">
+      <ContractBuilder
+      config={config}
+      />
+    </div>
   );
 };
 

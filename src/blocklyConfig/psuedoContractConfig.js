@@ -3,59 +3,14 @@ import Blockly from "blockly";
 import "./psuedoContractGenerators";
 
 import parseXml from "./parseXml";
-import theme from "./theme";
+
 import blockJson from "./psuedoContractBlocks.json";
+import initialXml from "./initialXml";
+import theme from "./theme";
 
 Blockly.defineBlocksWithJsonArray(blockJson);
 
-const workspaceXml = ``;
-
-// const workspaceXml = `<xml xmlns="https://developers.google.com/blockly/xml">
-//   <block type="smart_contract" x="-10" y="30">
-//     <field name="name">Smart Contract Builder Test</field>
-//     <field name="authors">Joe, Dave and Ella</field>
-//     <statement name="objects">
-//       <block type="object">
-//         <field name="name">Default Thing 1</field>
-//         <field name="description">A fun throwback to the geopact code.</field>
-//         <next>
-//           <block type="object">
-//             <field name="name">Default Thing 2</field>
-//             <field name="description">The same joke repeated.</field>
-//           </block>
-//         </next>
-//       </block>
-//     </statement>
-//     <statement name="contract-code">
-//       <block type="contract_section">
-//         <field name="name">Sending a message.</field>
-//         <statement name="children">
-//           <block type="message">
-//             <field name="target">Default Thing 1</field>
-//             <field name="content">Test message.</field>
-//           </block>
-//         </statement>
-//         <next>
-//           <block type="contract_section">
-//             <field name="name">Emitting an action command.</field>
-//             <statement name="children">
-//               <block type="action">
-//                 <field name="target">Default Thing 2</field>
-//                 <field name="action">unlock</field>
-//                 <next>
-//                   <block type="message">
-//                     <field name="target">Default Thing 2</field>
-//                     <field name="content">This thing just unlocked!</field>
-//                   </block>
-//                 </next>
-//               </block>
-//             </statement>
-//           </block>
-//         </next>
-//       </block>
-//     </statement>
-//   </block>
-// </xml>`;
+const workspaceXml = initialXml;
 
 const toolboxXml = `
 <xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
@@ -124,7 +79,7 @@ const workspaceOptions = {
   },
   zoom: {
     controls: true,
-    startScale: 0.66,
+    startScale: 0.75,
   }
 };
 
