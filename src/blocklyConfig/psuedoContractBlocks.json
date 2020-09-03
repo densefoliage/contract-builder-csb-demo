@@ -1,0 +1,302 @@
+[{
+  "type": "smart_contract",
+  "message0": "Smart Contract Template %1 Contract name: %2 %3 Contract by: %4 %5 Entities: %6 Code: %7",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_input",
+      "name": "name",
+      "text": "Contract Name"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_input",
+      "name": "authors",
+      "text": "Author(s)"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "objects"
+    },
+    {
+      "type": "input_statement",
+      "name": "contract-code"
+    }
+  ],
+  "inputsInline": false,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "smart_contract_block"
+},
+{
+  "type": "contract_section",
+  "message0": "Section: %1 %2 Code %3",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "name",
+      "text": "Section Name"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "children"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "structure_blocks"
+},
+{
+  "type": "object",
+  "message0": "Entity Name: %1 Description: %2",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "name",
+      "text": "Object Name"
+    },
+    {
+      "type": "field_input",
+      "name": "description",
+      "text": "Description"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "variables_blocks"
+},
+{
+  "type": "if_this_do_that",
+  "message0": "If this is true: %1 Do this: %2",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "preconditions"
+    },
+    {
+      "type": "input_statement",
+      "name": "code"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "predicates_structure_blocks"
+},
+{
+  "type": "if_else",
+  "message0": "If this is true: %1 Do this: %2 If not, do this: %3",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "preconditions"
+    },
+    {
+      "type": "input_statement",
+      "name": "if_code"
+    },
+    {
+      "type": "input_statement",
+      "name": "else_code"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "predicates_structure_blocks"
+},
+{
+  "type": "is_near",
+  "message0": "If %1 is near %2",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "target",
+      "text": "Entity"
+    },
+    {
+      "type": "field_input",
+      "name": "location",
+      "text": "Entity/Location"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "predicates_blocks"
+},
+{
+  "type": "is_far",
+  "message0": "If %1 is far from %2",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "target",
+      "text": "Entity"
+    },
+    {
+      "type": "field_input",
+      "name": "location",
+      "text": "Entity/Location"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "predicates_blocks"
+},
+{
+  "type": "time_is",
+  "message0": "If time is %1",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "time",
+      "text": "00:00"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "predicates_blocks"
+},
+{
+  "type": "does",
+  "message0": "If %1 does %2",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "target",
+      "text": "Entity"
+    },
+    {
+      "type": "field_input",
+      "name": "action",
+      "text": "Action"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "predicates_blocks"
+},
+{
+  "type": "action",
+  "message0": "Action: %1 should %2",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "target",
+      "text": "Entity"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "action",
+      "options": [
+        [
+          "lock",
+          "lock"
+        ],
+        [
+          "unlock",
+          "unlock"
+        ],
+        [
+          "verify",
+          "verify"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "actions_blocks"
+},
+{
+  "type": "custom_action",
+  "message0": "Action: %1 should %2",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "target",
+      "text": "Entity"
+    },
+    {
+      "type": "field_input",
+      "name": "action",
+      "text": "custom action"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "actions_blocks"
+},
+{
+  "type": "message",
+  "message0": "Message to: %1 : \"%2\"",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "target",
+      "text": "Entity"
+    },
+    {
+      "type": "field_input",
+      "name": "content",
+      "text": "Hello world!"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "actions_blocks"
+},
+{
+  "type": "comment",
+  "message0": "Comment: %1 %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_input",
+      "name": "content",
+      "text": "/* User comment */"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "tooltip": "",
+  "helpUrl": "",
+  "style": "other_blocks"
+}
+]
